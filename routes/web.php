@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\TodoListController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoListController;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('/list', [TodoListController::class, 'index']);
+
+Route:: resource('tasks', TaskController::class);
